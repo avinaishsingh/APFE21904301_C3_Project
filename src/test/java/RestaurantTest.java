@@ -14,7 +14,7 @@ class RestaurantTest {
     Restaurant restaurant;
     LocalTime openingTime;
     LocalTime closingTime;
-    //REFACTOR ALL THE REPEATED LINES OF CODE
+
 
     @BeforeEach
     public void setup() {
@@ -23,8 +23,7 @@ class RestaurantTest {
        restaurant = new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
     }
 
-    //>>>>>>>>>>>>>>>>>>>>>>>>>OPEN/CLOSED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-    //-------FOR THE 2 TESTS BELOW, YOU MAY USE THE CONCEPT OF MOCKING, IF YOU RUN INTO ANY TROUBLE
+
     @Test
     public void is_restaurant_open_should_return_true_if_time_is_between_opening_and_closing_time(){
         //WRITE UNIT TEST CASE HERE
@@ -48,10 +47,7 @@ class RestaurantTest {
 
     }
 
-    //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-
-    //>>>>>>>>>>>>>>>>>>>>>>>>>>>MENU<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test
     public void adding_item_to_menu_should_increase_menu_size_by_1(){
 
@@ -81,7 +77,6 @@ class RestaurantTest {
         assertThrows(itemNotFoundException.class,
                 ()->restaurant.removeFromMenu("French fries"));
     }
-    //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     @Test
     public void  calculate_order_value_from_items_added_in_list() {
